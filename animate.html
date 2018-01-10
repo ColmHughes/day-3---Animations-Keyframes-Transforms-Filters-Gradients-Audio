@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation example</title>
+        <style type="text/css">
+        .box1{
+          width:200px;
+          height:140px;
+          background:rgba(0,255,0,0.5);
+          position:absolute;
+          top:100px;
+          left:50%;
+          padding-top: 60px;
+          margin-left:-100px;
+          -webkit-animation: movingbox1 5s infinite;
+        }
+        
+        .box2{
+          width:200px;
+          height:140px;
+          background:rgba(0,0,255,0.5);
+          border-radius: 50%;
+          position:absolute;
+          padding-top: 60px;
+          text-align: center;
+          bottom: 10%;
+          left:90%;
+          margin-left:-100px;
+          -webkit-animation:movingbox 10s infinite;
+        }
+        
+        @-webkit-keyframes movingbox{
+          0%{left:90%; bottom:10%; transform: rotate(0deg);}
+          25%{left:90%; top:10%; transform: rotate(30deg);}
+          50%{left:10%; top:10%; transform: rotate(60deg);}
+          75%{left:10%; bottom:10%; transform: rotate(30deg);}
+          100%{left:90%; bottom:10%; transform: rotate(0deg);}
+        }
+        
+        @-webkit-keyframes movingbox1 {
+          0%{left: 50%;}
+          25%{left: 30%;}
+          50%{top: 50px; left: 50%;}
+          75%{top: 100px; left: 80%;}
+          100%{left:50%;}
+        }
+            
+        </style>
+    </head>
+    <body>
+        <div class="box1"><h1>Rock</h1></div>
+        <div class="box2"><h1>Roll</h1></div>
+    </body>
+</html>
